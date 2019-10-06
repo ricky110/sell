@@ -43,20 +43,20 @@ public class ProductCategoryRepositoryTest {
         Assert.assertNotNull(result);
     }
 
-    // 更新数据
+
     @Test
     public void saveTest2() {
         ProductCategory productCategory = new ProductCategory();
         productCategory.setCategoryId(2);
         productCategory.setCategoryName("男士最爱");
-        productCategory.setCategoryType(3);
+        productCategory.setCategoryType(5);
         repository.save(productCategory);
     }
-
+    // 更新数据
     @Test
     public void saveTest3() {
-        ProductCategory productCategory = repository.getOne(2);
-        productCategory.setCategoryType(3);
+        ProductCategory productCategory = repository.getOne(1);
+        productCategory.setCategoryType(1);
         repository.save(productCategory);
     }
 

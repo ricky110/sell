@@ -3,23 +3,19 @@ package com.huawei.enums;
 import lombok.Getter;
 
 /**
- * 商品状态
  * @Author: Ricky
- * @Date: 2019-09-23 12:38
+ * @Date: 2019-10-06 16:49
  */
 @Getter
-public enum ProductStatusEnum {
+public enum PayStatusEnum {
 
-    UP(0,"在架"),
-    DOWN(1, "下架")
+    WAIT(0, "等待支付"),
+    SUCCESS(1, "支付成功"),
     ;
-
     private Integer code;
-
     private String message;
 
-    ProductStatusEnum(Integer code, String message) {
-
+    PayStatusEnum(Integer code, String message) {
         this.code = code;
         this.message = message;
     }
